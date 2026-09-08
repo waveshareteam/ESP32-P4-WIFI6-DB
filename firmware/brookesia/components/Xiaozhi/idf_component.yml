@@ -1,0 +1,34 @@
+version: 0.8.0
+dependencies:
+  brookesia_core:
+    public: true
+  esp32_p4_wifi6_db:
+    path: "../../../esp32_p4_wifi6_db"
+
+  bsp_extra:
+    path: "../bsp_extra"
+    public: true
+
+  78/xiaozhi-fonts:
+    version: "1.6.0"
+
+  espressif/esp_xiaozhi:
+    version: "0.1.1"
+
+  espressif/mcp-c-sdk:
+    version: "^2.0.1"
+
+  espressif/cjson:
+    version: "1.*"
+
+  espressif/esp_audio_codec:
+    version: "2.4.1"
+
+  espressif/esp_audio_effects:
+    version: "~1.3.0"
+
+  espressif/esp-sr:
+    version: "~2.4.6"
+
+  espressif/esp-lib-utils:
+    version: "0.3.*"

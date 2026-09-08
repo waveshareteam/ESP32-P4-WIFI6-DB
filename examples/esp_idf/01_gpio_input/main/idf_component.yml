@@ -1,0 +1,4 @@
+## IDF Component Manager Manifest File
+dependencies:
+  esp32_p4_wifi6_db:
+    path: "../../../../firmware/esp32_p4_wifi6_db"

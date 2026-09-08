@@ -1,0 +1,57 @@
+menu "Example Configuration"
+
+    choice EXAMPLE_MODE
+        prompt "Example mode"
+        default EXAMPLE_MODE_MUSIC
+        help
+            Select example work mode
+
+        config EXAMPLE_MODE_MUSIC
+            bool "music"
+        config EXAMPLE_MODE_ECHO
+            bool "echo"
+    endchoice
+
+    choice EXAMPLE_MIC_GAIN_SELECTION
+        prompt "Microphone gain"
+        default EXAMPLE_MIC_GAIN_24DB
+        help
+            Select the ES8311 microphone input gain in dB.
+            This setting is used when opening or restoring the microphone codec.
+
+        config EXAMPLE_MIC_GAIN_0DB
+            bool "0 dB"
+        config EXAMPLE_MIC_GAIN_6DB
+            bool "6 dB"
+        config EXAMPLE_MIC_GAIN_12DB
+            bool "12 dB"
+        config EXAMPLE_MIC_GAIN_18DB
+            bool "18 dB"
+        config EXAMPLE_MIC_GAIN_24DB
+            bool "24 dB"
+        config EXAMPLE_MIC_GAIN_30DB
+            bool "30 dB"
+        config EXAMPLE_MIC_GAIN_36DB
+            bool "36 dB"
+        config EXAMPLE_MIC_GAIN_42DB
+            bool "42 dB"
+    endchoice
+
+    config EXAMPLE_MIC_GAIN_DB
+        int
+        default 0 if EXAMPLE_MIC_GAIN_0DB
+        default 6 if EXAMPLE_MIC_GAIN_6DB
+        default 12 if EXAMPLE_MIC_GAIN_12DB
+        default 18 if EXAMPLE_MIC_GAIN_18DB
+        default 24 if EXAMPLE_MIC_GAIN_24DB
+        default 30 if EXAMPLE_MIC_GAIN_30DB
+        default 36 if EXAMPLE_MIC_GAIN_36DB
+        default 42 if EXAMPLE_MIC_GAIN_42DB
+
+    config EXAMPLE_VOICE_VOLUME
+        int "Voice volume"
+        range 0 100
+        default 60
+        help
+            Set voice volume
+endmenu

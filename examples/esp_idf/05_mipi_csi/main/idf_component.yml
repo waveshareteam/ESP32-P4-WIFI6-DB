@@ -1,0 +1,5 @@
+dependencies:
+  idf: ">=5.4"
+
+  esp32_p4_wifi6_db:
+    path: "../../../../firmware/esp32_p4_wifi6_db"

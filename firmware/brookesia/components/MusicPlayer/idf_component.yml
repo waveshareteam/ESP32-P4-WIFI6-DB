@@ -1,0 +1,6 @@
+version: 0.6.0
+dependencies:
+  brookesia_core:
+    public: true
+  chmorgan/esp-file-iterator:
+    public: true

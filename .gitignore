@@ -1,0 +1,11 @@
+.clangd
+
+sdkconfig
+sdkconfig.old
+dependencies.lock
+
+.vscode/
+build/
+managed_components/
+
+.superpowers/

@@ -1,0 +1,10 @@
+dependencies:
+  espressif/esp_wifi_remote:
+    matches:
+    - if: idf_version >= 6.0
+      version: '>=1.6,<2.0'
+    - if: idf_version < 6.0
+      version: 0.14.*
+  idf:
+    version: '>=4.1.0'
+  espressif/esp_hosted: '*'

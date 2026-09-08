@@ -1,0 +1,31 @@
+dependencies:
+  idf:
+    version: '>=5.5'
+
+  esp32_p4_wifi6_db:
+    path: "../../../esp32_p4_wifi6_db"
+
+  espressif/esp_wifi_remote:
+    version: "*"
+
+  espressif/esp_hosted:
+    version: "*"
+
+  espressif/esp-lib-utils:
+    version: "0.3.*"
+
+  espressif/esp_audio_codec:
+    version: "2.4.1"
+
+  chmorgan/esp-audio-player:
+    version: 1.1.*
+    public: true
+
+  chmorgan/esp-file-iterator:
+    version: 1.0.0
+    public: true
+
+description: Project-specific extensions for ESP32-P4-WIFI6-DB
+targets:
+- esp32p4
+version: 0.0.2
