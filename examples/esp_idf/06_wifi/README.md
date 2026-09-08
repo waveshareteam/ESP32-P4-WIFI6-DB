@@ -35,7 +35,7 @@ according to the ESP-IDF version.
 Run the commands from an ESP-IDF PowerShell:
 
 ```powershell
-cd examples\esp_idf\09_ext_esp32_module_test
+cd examples\esp_idf\06_wifi
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build

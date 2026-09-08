@@ -10,7 +10,8 @@ and schematic for the Waveshare ESP32-P4-WIFI6-DB development board.
 | Path | Contents |
 | --- | --- |
 | [firmware/esp32_p4_wifi6_db](firmware/esp32_p4_wifi6_db) | ESP-IDF BSP, headers, Kconfig and component manifest |
-| [examples/esp_idf](examples/esp_idf) | Peripheral examples and the Brookesia application |
+| [examples/esp_idf](examples/esp_idf) | Peripheral examples |
+| [firmware/brookesia](firmware/brookesia/README.md) | ESP-Brookesia board integration application |
 | [examples/Arduino](examples/Arduino/README.md) | Arduino sketches and local board definitions |
 | [firmware/factory-firmware](firmware/factory-firmware) | ESP32-P4 images for 5, 7, 8 and 10.1-inch panels, and an ESP32-C5 slave image |
 | [hardware/ESP32-P4-WIFI6-DB.pdf](hardware/ESP32-P4-WIFI6-DB.pdf) | Board schematic |
@@ -45,8 +46,8 @@ external peripherals.
 | `CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A` | JD9365, 10.1-inch | 800 × 1280 |
 
 The [BSP Kconfig](firmware/esp32_p4_wifi6_db/Kconfig) defaults to **10.1-inch JD9365**.
-[Brookesia defaults](examples/esp_idf/brookesia/sdkconfig.defaults) select
-**8-inch JD9365**. Select the attached panel before building. Defaults do not
+[Brookesia defaults](firmware/brookesia/sdkconfig.defaults) also select
+**10.1-inch JD9365**. Select the attached panel before building. Defaults do not
 replace an existing `sdkconfig`; check the project's configuration and generated
 `build/config/sdkconfig.h` when determining the effective selection.
 
@@ -63,7 +64,7 @@ replace an existing `sdkconfig`; check the project's configuration and generated
 | [06_wifi](examples/esp_idf/06_wifi) | Wi-Fi station connection and gateway ping |
 | [07_i2s_codec](examples/esp_idf/07_i2s_codec) | ES8311 embedded audio playback or microphone loopback |
 | [08_usb_host_msc](examples/esp_idf/08_usb_host_msc) | USB mass-storage file operations and sequential read/write speed tests |
-| [brookesia](examples/esp_idf/brookesia) | Integrated GUI with calculator, drawing, audio, camera, video, settings, Xiaozhi and GPIO applications |
+| [brookesia](firmware/brookesia/README.md) | Integrated GUI with calculator, drawing, audio, camera, video, settings, Xiaozhi and GPIO applications |
 
 See each example's README and configuration for wiring and operation.
 
@@ -77,7 +78,7 @@ constraints.
 From the repository root, for example:
 
 ```powershell
-cd examples\esp_idf\brookesia
+cd firmware\brookesia
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build

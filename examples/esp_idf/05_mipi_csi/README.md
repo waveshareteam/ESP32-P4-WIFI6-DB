@@ -53,7 +53,7 @@ If you use SC2336 or another sensor, update the sensor selection and output form
 Build the project and flash it to the board, then run monitor tool to view serial output (replace `PORT` with your board's serial port name):
 
 ```bash
-cd examples/esp_idf/07_mipi_csi_test
+cd examples/esp_idf/05_mipi_csi
 idf.py set-target esp32p4
 idf.py -p PORT flash monitor
 ```
@@ -68,7 +68,7 @@ The display backlight turns on, the GT911 is registered, and the LCD shows the l
 
 ### Troubleshooting
 
-- Run [06_mipi_dsi_test](../06_mipi_dsi_test/) first to verify the LCD path.
+- Run [04_mipi_dsi](../04_mipi_dsi/) first to verify the LCD path.
 - Check camera FPC orientation, sensor power, SCCB/I2C pins, and selected sensor model if `video cam open failed` appears.
 - Confirm PSRAM is enabled and stable; camera buffers are allocated from PSRAM.
 - If the image is cropped, mirrored, or rotated incorrectly, adjust the sensor output format or the PPA operation in `main/main.c`.

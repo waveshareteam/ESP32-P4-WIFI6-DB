@@ -46,7 +46,7 @@ hardware test.
 
 | Function | Current project configuration |
 | --- | --- |
-| Display/touch | JD9365 800x1280 MIPI-DSI, GT911; current defaults select the 8-inch variant |
+| Display/touch | JD9365 800x1280 MIPI-DSI, GT911; current defaults select the 10.1-inch A variant |
 | Display buffers | RGB565, 3 MIPI-DPI frame buffers |
 | RTC | Not initialized by this example; the status bar uses system time |
 | Audio | ES8311 through the local BSP and `bsp_extra` |
@@ -57,11 +57,11 @@ hardware test.
 | Partitions | 9 MB `factory`, 5 MB `storage` SPIFFS |
 
 The checked-in `sdkconfig.defaults` selects
-`CONFIG_BSP_LCD_TYPE_800_1280_8_INCH_A`. For the 10.1-inch panel, select
-`CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A` in `menuconfig` before rebuilding.
+`CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A`. Select the matching panel in
+`menuconfig` before rebuilding.
 
 The board schematic is available at
-[hardware/ESP32-P4-WIFI6-DB.pdf](../../../hardware/ESP32-P4-WIFI6-DB.pdf).
+[hardware/ESP32-P4-WIFI6-DB.pdf](../../hardware/ESP32-P4-WIFI6-DB.pdf).
 
 For a clean configuration, verify these Hosted selections in `menuconfig`:
 
@@ -80,7 +80,7 @@ Use ESP-IDF 5.5 or newer. The current firmware was flashed and verified with
 ESP-IDF v6.0.1.
 
 ```powershell
-cd examples\esp_idf\brookesia_test
+cd firmware\brookesia
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build

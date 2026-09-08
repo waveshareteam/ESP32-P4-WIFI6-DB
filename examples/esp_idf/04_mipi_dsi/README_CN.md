@@ -19,7 +19,7 @@
 ## 构建和烧录
 
 ```powershell
-cd examples\esp_idf\06_mipi_dsi_test
+cd examples\esp_idf\04_mipi_dsi
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build
@@ -44,5 +44,5 @@ LCD 应点亮背光并显示垂直色条。
 - 如果日志正常但背光不亮，检查 GPIO7/GPIO8 上的共享 I2C 总线，以及
   `0x45` 设备的 `0x96` 寄存器写入。
 - 本板没有 LCD 复位 GPIO；请检查 DSI 供电、lane 配置、FPC 方向和面板初始化。
-- 在运行 [07_mipi_csi_test](../07_mipi_csi_test/) 前先运行此示例，把面板
+- 在运行 [05_mipi_csi](../05_mipi_csi/) 前先运行此示例，把面板
   bring-up 与摄像头处理分开测试。

@@ -43,7 +43,7 @@ PCF85063A RTC，状态栏时钟使用系统时间。
 
 | 功能 | 当前工程配置 |
 | --- | --- |
-| 显示/触摸 | JD9365 800x1280 MIPI-DSI、GT911；当前默认选择 8 英寸变体 |
+| 显示/触摸 | JD9365 800x1280 MIPI-DSI、GT911；当前默认选择 10.1 英寸 A 型变体 |
 | 显示缓冲 | RGB565、3 个 MIPI-DPI framebuffer |
 | RTC | 本示例未初始化 RTC，状态栏使用系统时间 |
 | 音频 | ES8311，通过本地 BSP 和 `bsp_extra` |
@@ -54,12 +54,11 @@ PCF85063A RTC，状态栏时钟使用系统时间。
 | 分区 | 9 MB `factory`、5 MB `storage` SPIFFS |
 
 仓库中的 `sdkconfig.defaults` 选择了
-`CONFIG_BSP_LCD_TYPE_800_1280_8_INCH_A`。如果使用 10.1 英寸面板，请在
-重新构建前通过 `menuconfig` 选择
-`CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A`。
+`CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A`。重新构建前请在 `menuconfig`
+中选择与实际连接面板匹配的选项。
 
 开发板原理图见
-[hardware/ESP32-P4-WIFI6-DB.pdf](../../../hardware/ESP32-P4-WIFI6-DB.pdf)。
+[hardware/ESP32-P4-WIFI6-DB.pdf](../../hardware/ESP32-P4-WIFI6-DB.pdf)。
 
 全新配置时，请在 `menuconfig` 中确认：
 
@@ -76,7 +75,7 @@ ESP32-C5 需要单独烧录兼容的 ESP-Hosted 协处理器固件；烧录本�
 使用 ESP-IDF 5.5 或更新版本；当前固件已在 ESP-IDF v6.0.1 下烧录验证。
 
 ```powershell
-cd examples\esp_idf\brookesia_test
+cd firmware\brookesia
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build

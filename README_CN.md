@@ -10,7 +10,8 @@ ESP-IDF 和 Arduino 示例、出厂固件及原理图。
 | 路径 | 内容 |
 | --- | --- |
 | [firmware/esp32_p4_wifi6_db](firmware/esp32_p4_wifi6_db) | ESP-IDF BSP、头文件、Kconfig 和组件清单 |
-| [examples/esp_idf](examples/esp_idf) | 外设示例和 Brookesia 应用 |
+| [examples/esp_idf](examples/esp_idf) | 外设示例 |
+| [firmware/brookesia](firmware/brookesia/README_CN.md) | ESP-Brookesia 板级综合应用 |
 | [examples/Arduino](examples/Arduino/README_CN.md) | Arduino 示例及本地板卡定义 |
 | [firmware/factory-firmware](firmware/factory-firmware) | 5、7、8、10.1 英寸面板的 ESP32-P4 固件，以及 ESP32-C5 从机固件 |
 | [hardware/ESP32-P4-WIFI6-DB.pdf](hardware/ESP32-P4-WIFI6-DB.pdf) | 开发板原理图 |
@@ -44,8 +45,8 @@ ESP-IDF 和 Arduino 示例、出厂固件及原理图。
 | `CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A` | JD9365，10.1 英寸 | 800 × 1280 |
 
 [BSP Kconfig](firmware/esp32_p4_wifi6_db/Kconfig) 默认选择 **10.1 英寸 JD9365**；
-[Brookesia 默认配置](examples/esp_idf/brookesia/sdkconfig.defaults) 选择
-**8 英寸 JD9365**。构建前应选择实际连接的面板。默认配置不会覆盖已有的
+[Brookesia 默认配置](firmware/brookesia/sdkconfig.defaults) 也选择
+**10.1 英寸 JD9365**。构建前应选择实际连接的面板。默认配置不会覆盖已有的
 `sdkconfig`；判断实际生效选项时，应检查工程配置和生成的 `build/config/sdkconfig.h`。
 
 ## ESP-IDF 示例
@@ -61,7 +62,7 @@ ESP-IDF 和 Arduino 示例、出厂固件及原理图。
 | [06_wifi](examples/esp_idf/06_wifi) | Wi-Fi STA 联网和网关 ping |
 | [07_i2s_codec](examples/esp_idf/07_i2s_codec) | ES8311 内置音频播放或麦克风回放 |
 | [08_usb_host_msc](examples/esp_idf/08_usb_host_msc) | USB 大容量存储文件操作和顺序读写速度测试 |
-| [brookesia](examples/esp_idf/brookesia) | 包含计算器、画板、音频、摄像头、视频、设置、Xiaozhi 和 GPIO 应用的综合界面 |
+| [brookesia](firmware/brookesia/README_CN.md) | 包含计算器、画板、音频、摄像头、视频、设置、Xiaozhi 和 GPIO 应用的综合界面 |
 
 接线和操作方法请查看各示例的 README 及配置。
 
@@ -74,7 +75,7 @@ ESP-IDF 和 Arduino 示例、出厂固件及原理图。
 例如，从仓库根目录执行：
 
 ```powershell
-cd examples\esp_idf\brookesia
+cd firmware\brookesia
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build

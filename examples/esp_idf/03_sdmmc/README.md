@@ -16,7 +16,7 @@ Intermediate.
 ## Build and Flash
 
 ```bash
-cd examples/esp-idf/09_sdmmc
+cd examples/esp_idf/03_sdmmc
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build

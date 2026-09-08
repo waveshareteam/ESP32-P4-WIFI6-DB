@@ -31,7 +31,7 @@ CONFIG_ESP_WIFI_REMOTE_LIBRARY_HOSTED=y
 请在 ESP-IDF PowerShell 中执行：
 
 ```powershell
-cd examples\esp_idf\09_ext_esp32_module_test
+cd examples\esp_idf\06_wifi
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build

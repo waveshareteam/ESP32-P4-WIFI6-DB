@@ -53,7 +53,7 @@ Component config  --->
 构建工程并烧录到开发板，然后运行监视工具查看串口输出（将 `PORT` 替换为开发板串口名）：
 
 ```bash
-cd examples/esp_idf/07_mipi_csi_test
+cd examples/esp_idf/05_mipi_csi
 idf.py set-target esp32p4
 idf.py -p PORT flash monitor
 ```
@@ -68,7 +68,7 @@ idf.py -p PORT flash monitor
 
 ### 排障
 
-- 先运行 [06_mipi_dsi_test](../06_mipi_dsi_test/) 验证 LCD 路径。
+- 先运行 [04_mipi_dsi](../04_mipi_dsi/) 验证 LCD 路径。
 - 如果出现 `video cam open failed`，检查摄像头 FPC 方向、传感器供电、SCCB/I2C 引脚和已选传感器型号。
 - 确认 PSRAM 已启用且稳定；摄像头 buffer 会从 PSRAM 分配。
 - 如果图像裁剪、镜像或旋转不正确，请调整传感器输出格式或 `main/main.c` 中的 PPA 操作。
