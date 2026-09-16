@@ -8,7 +8,7 @@
     <a href="README.md">English</a> ·
     <a href="https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm">🛒 产品页面</a> ·
     <a href="https://docs.waveshare.net/ESP32-P4-WIFI6-DB">📚 Wiki</a> ·
-    <a href="components/esp32_p4_wifi6_db/">🔌 BSP</a> ·
+    <a href="components/waveshare_bsp/esp32_p4_wifi6_db/">🔌 BSP</a> ·
     <a href="examples/esp_idf/">🧩 ESP-IDF 示例</a> ·
     <a href="examples/Arduino/">🔧 Arduino 示例</a> ·
     <a href="firmware/">📦 固件</a>
@@ -39,7 +39,7 @@ MIPI-CSI 摄像头接口、ES8311 音频编解码器、microSD、USB 和扩展 G
 | 摄像头 | MIPI-CSI；摄像头示例配置 OV5647 |
 | 音频 | ES8311 编解码器，单路模拟麦克风输入和扬声器功放 |
 | 存储与扩展 | microSD（4-bit SDMMC）、USB Host、SPIFFS、扩展 GPIO |
-| 板级支持 | 本地组件 [`esp32_p4_wifi6_db`](components/esp32_p4_wifi6_db/) 0.0.1 |
+| 板级支持 | 本地组件 [`esp32_p4_wifi6_db`](components/waveshare_bsp/esp32_p4_wifi6_db/) 0.0.1 |
 | 原理图 | [hardware/ESP32-P4-WIFI6-DB.pdf](hardware/ESP32-P4-WIFI6-DB.pdf) |
 
 完整引脚定义、40 针排针对照和逐个 GPIO 的分配见
@@ -58,8 +58,8 @@ MIPI-CSI 摄像头接口、ES8311 音频编解码器、microSD、USB 和扩展 G
 | 存储 / USB | SPIFFS 和 USB Host 支持 |
 | RTC | BSP 不提供外部 RTC 支持（`BSP_CAPS_RTC=0`） |
 
-实现细节见 [BSP README](components/esp32_p4_wifi6_db/README_CN.md) 和
-[BSP API 参考](components/esp32_p4_wifi6_db/API_CN.md)。
+实现细节见 [BSP README](components/waveshare_bsp/esp32_p4_wifi6_db/README_CN.md) 和
+[BSP API 参考](components/waveshare_bsp/esp32_p4_wifi6_db/API_CN.md)。
 
 ### ESP-IDF LCD 选择
 
@@ -70,7 +70,7 @@ MIPI-CSI 摄像头接口、ES8311 音频编解码器、microSD、USB 和扩展 G
 | `CONFIG_BSP_LCD_TYPE_800_1280_8_INCH_A` | JD9365，8 英寸 | 800 × 1280 |
 | `CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A` | JD9365，10.1 英寸 | 800 × 1280 |
 
-[BSP Kconfig](components/esp32_p4_wifi6_db/Kconfig) 默认选择 **10.1 英寸 JD9365**；
+[BSP Kconfig](components/waveshare_bsp/esp32_p4_wifi6_db/Kconfig) 默认选择 **10.1 英寸 JD9365**；
 [Brookesia 默认配置](firmware/brookesia/sdkconfig.defaults) 也选择
 **10.1 英寸 JD9365**。构建前应选择实际连接的面板。默认配置不会覆盖已有的
 `sdkconfig`；判断实际生效选项时，应检查工程配置和生成的 `build/config/sdkconfig.h`。
@@ -168,7 +168,7 @@ idf.py -p COMx flash monitor
 
 | 路径 | 内容 |
 | --- | --- |
-| [`components/esp32_p4_wifi6_db/`](components/esp32_p4_wifi6_db/) | ESP-IDF BSP、头文件、Kconfig 和组件清单 |
+| [`components/waveshare_bsp/esp32_p4_wifi6_db/`](components/waveshare_bsp/esp32_p4_wifi6_db/) | ESP-IDF BSP、头文件、Kconfig 和组件清单 |
 | [`examples/esp_idf/`](examples/esp_idf/) | ESP-IDF 外设示例 |
 | [`examples/Arduino/`](examples/Arduino/README_CN.md) | Arduino 示例及本地板卡定义 |
 | [`firmware/brookesia/`](firmware/brookesia/README_CN.md) | ESP-Brookesia 板级综合应用 |
@@ -182,9 +182,9 @@ idf.py -p COMx flash monitor
 - [产品页面](https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm)
 - [官方 Wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB)
 - [硬件参考](docs/zh_CN/hw-reference/user-guide-esp32-p4-wifi6-db.md)
-- [BSP README](components/esp32_p4_wifi6_db/README_CN.md)
-- [BSP API 参考](components/esp32_p4_wifi6_db/API_CN.md)
-- [BSP 更新日志](components/esp32_p4_wifi6_db/CHANGELOG.md)
+- [BSP README](components/waveshare_bsp/esp32_p4_wifi6_db/README_CN.md)
+- [BSP API 参考](components/waveshare_bsp/esp32_p4_wifi6_db/API_CN.md)
+- [BSP 更新日志](components/waveshare_bsp/esp32_p4_wifi6_db/CHANGELOG.md)
 - [Arduino 示例](examples/Arduino/README_CN.md)
 - [Brookesia 固件](firmware/brookesia/README_CN.md)
 - [原理图](hardware/ESP32-P4-WIFI6-DB.pdf)

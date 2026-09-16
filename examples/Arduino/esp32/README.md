@@ -37,7 +37,7 @@ hardware connection and the memory requirements of the example.
 
 ## Board-specific differences
 
-`pins_arduino.h` follows the `components/esp32_p4_wifi6_db` BSP and this
+`pins_arduino.h` follows the `components/waveshare_bsp/esp32_p4_wifi6_db` BSP and this
 project's schematic:
 
 - I2C1: SDA=`GPIO7`, SCL=`GPIO8`, 400 kHz by default; general I2C and audio

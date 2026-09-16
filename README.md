@@ -8,7 +8,7 @@
     <a href="README_CN.md">简体中文</a> ·
     <a href="https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm">🛒 Product Page</a> ·
     <a href="https://docs.waveshare.net/ESP32-P4-WIFI6-DB">📚 Wiki</a> ·
-    <a href="components/esp32_p4_wifi6_db/">🔌 BSP</a> ·
+    <a href="components/waveshare_bsp/esp32_p4_wifi6_db/">🔌 BSP</a> ·
     <a href="examples/esp_idf/">🧩 ESP-IDF Examples</a> ·
     <a href="examples/Arduino/">🔧 Arduino Examples</a> ·
     <a href="firmware/">📦 Firmware</a>
@@ -42,7 +42,7 @@ ordering information.
 | Camera | MIPI-CSI; camera examples configure OV5647 |
 | Audio | ES8311 codec with one analog microphone input and a speaker amplifier |
 | Storage and expansion | microSD (4-bit SDMMC), USB Host, SPIFFS, expansion-header GPIO |
-| Board support | Local component [`esp32_p4_wifi6_db`](components/esp32_p4_wifi6_db/) 0.0.1 |
+| Board support | Local component [`esp32_p4_wifi6_db`](components/waveshare_bsp/esp32_p4_wifi6_db/) 0.0.1 |
 | Schematic | [hardware/ESP32-P4-WIFI6-DB.pdf](hardware/ESP32-P4-WIFI6-DB.pdf) |
 
 The full pinout, 40-pin header map and per-GPIO allocation are in the
@@ -61,8 +61,8 @@ The full pinout, 40-pin header map and per-GPIO allocation are in the
 | Storage / USB | SPIFFS and USB Host support |
 | RTC | No external RTC support in the BSP (`BSP_CAPS_RTC=0`) |
 
-See the [BSP README](components/esp32_p4_wifi6_db/README.md) and
-[BSP API reference](components/esp32_p4_wifi6_db/API.md) for implementation details.
+See the [BSP README](components/waveshare_bsp/esp32_p4_wifi6_db/README.md) and
+[BSP API reference](components/waveshare_bsp/esp32_p4_wifi6_db/API.md) for implementation details.
 
 ### ESP-IDF LCD selection
 
@@ -73,7 +73,7 @@ See the [BSP README](components/esp32_p4_wifi6_db/README.md) and
 | `CONFIG_BSP_LCD_TYPE_800_1280_8_INCH_A` | JD9365, 8-inch | 800 × 1280 |
 | `CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A` | JD9365, 10.1-inch | 800 × 1280 |
 
-The [BSP Kconfig](components/esp32_p4_wifi6_db/Kconfig) defaults to **10.1-inch JD9365**.
+The [BSP Kconfig](components/waveshare_bsp/esp32_p4_wifi6_db/Kconfig) defaults to **10.1-inch JD9365**.
 [Brookesia defaults](firmware/brookesia/sdkconfig.defaults) also select
 **10.1-inch JD9365**. Select the attached panel before building. Defaults do not
 replace an existing `sdkconfig`; check the project's configuration and generated
@@ -179,7 +179,7 @@ establish compatibility with freshly resolved host dependencies.
 
 | Path | Purpose |
 | --- | --- |
-| [`components/esp32_p4_wifi6_db/`](components/esp32_p4_wifi6_db/) | ESP-IDF BSP, headers, Kconfig and component manifest |
+| [`components/waveshare_bsp/esp32_p4_wifi6_db/`](components/waveshare_bsp/esp32_p4_wifi6_db/) | ESP-IDF BSP, headers, Kconfig and component manifest |
 | [`examples/esp_idf/`](examples/esp_idf/) | First-party ESP-IDF peripheral examples |
 | [`examples/Arduino/`](examples/Arduino/README.md) | Arduino sketches and local board definitions |
 | [`firmware/brookesia/`](firmware/brookesia/README.md) | ESP-Brookesia board integration application |
@@ -193,9 +193,9 @@ establish compatibility with freshly resolved host dependencies.
 - [Product Page](https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm)
 - [Official Wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB)
 - [Hardware Reference](docs/en/hw-reference/user-guide-esp32-p4-wifi6-db.md)
-- [BSP README](components/esp32_p4_wifi6_db/README.md)
-- [BSP API Reference](components/esp32_p4_wifi6_db/API.md)
-- [BSP Changelog](components/esp32_p4_wifi6_db/CHANGELOG.md)
+- [BSP README](components/waveshare_bsp/esp32_p4_wifi6_db/README.md)
+- [BSP API Reference](components/waveshare_bsp/esp32_p4_wifi6_db/API.md)
+- [BSP Changelog](components/waveshare_bsp/esp32_p4_wifi6_db/CHANGELOG.md)
 - [Arduino Examples](examples/Arduino/README.md)
 - [Brookesia Firmware](firmware/brookesia/README.md)
 - [Schematic](hardware/ESP32-P4-WIFI6-DB.pdf)

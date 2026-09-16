@@ -3,7 +3,7 @@ dependencies:
   brookesia_core:
     public: true
   esp32_p4_wifi6_db:
-    path: "../../../../components/esp32_p4_wifi6_db"
+    path: "../../../../components/waveshare_bsp/esp32_p4_wifi6_db"
 
   bsp_extra:
     path: "../bsp_extra"

@@ -15,7 +15,7 @@ header.
 > **Note**
 >
 > This page is compiled from three sources: the board support package (BSP)
-> in [`components/esp32_p4_wifi6_db`](../../../components/esp32_p4_wifi6_db/),
+> in [`components/waveshare_bsp/esp32_p4_wifi6_db`](../../../components/waveshare_bsp/esp32_p4_wifi6_db/),
 > the schematic in [`hardware/ESP32-P4-WIFI6-DB.pdf`](../../../hardware/ESP32-P4-WIFI6-DB.pdf),
 > and the [official wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB).
 > GPIO assignments are cross-checked between the BSP and the schematic
@@ -240,9 +240,9 @@ reproduced in this repository.
 
 ## Related Documentation
 
-- [BSP README](../../../components/esp32_p4_wifi6_db/README.md)
-- [BSP API reference](../../../components/esp32_p4_wifi6_db/API.md)
-- [BSP changelog](../../../components/esp32_p4_wifi6_db/CHANGELOG.md)
+- [BSP README](../../../components/waveshare_bsp/esp32_p4_wifi6_db/README.md)
+- [BSP API reference](../../../components/waveshare_bsp/esp32_p4_wifi6_db/API.md)
+- [BSP changelog](../../../components/waveshare_bsp/esp32_p4_wifi6_db/CHANGELOG.md)
 - [Schematic](../../../hardware/ESP32-P4-WIFI6-DB.pdf)
 - [Official wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB)
 - [Product page](https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm)

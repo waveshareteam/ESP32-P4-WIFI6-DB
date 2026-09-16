@@ -31,7 +31,7 @@
 
 ## 板级差异
 
-`pins_arduino.h` 按 `components/esp32_p4_wifi6_db` BSP 和该工程原理图适配：
+`pins_arduino.h` 按 `components/waveshare_bsp/esp32_p4_wifi6_db` BSP 和该工程原理图适配：
 
 - I2C1：SDA=`GPIO7`，SCL=`GPIO8`，默认 400 kHz；普通 I2C/音频示例使用 `Wire1`。
 - ES8311 I2S：MCLK/BCLK/WS/DOUT/DIN=`GPIO13/12/10/9/11`，功放使能=`GPIO53`；板载为单麦克风、单扬声器。

@@ -6,7 +6,7 @@
 
 Software documentation lives next to the code:
 
-- BSP: [README](../components/esp32_p4_wifi6_db/README.md) · [API](../components/esp32_p4_wifi6_db/API.md) · [Changelog](../components/esp32_p4_wifi6_db/CHANGELOG.md)
+- BSP: [README](../components/waveshare_bsp/esp32_p4_wifi6_db/README.md) · [API](../components/waveshare_bsp/esp32_p4_wifi6_db/API.md) · [Changelog](../components/waveshare_bsp/esp32_p4_wifi6_db/CHANGELOG.md)
 - Arduino: [examples/Arduino/README.md](../examples/Arduino/README.md)
 - Brookesia firmware: [firmware/brookesia/README.md](../firmware/brookesia/README.md)
 

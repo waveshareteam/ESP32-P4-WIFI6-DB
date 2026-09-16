@@ -87,7 +87,7 @@ idf.py -p COMx flash monitor
 `components/bsp_extra/idf_component.yml` 通过以下相对路径引用本地 BSP：
 
 ```text
-../../components/esp32_p4_wifi6_db
+../../components/waveshare_bsp/esp32_p4_wifi6_db
 ```
 
 构建过程还会生成并烧录 `storage` SPIFFS 镜像。仓库没有跟踪

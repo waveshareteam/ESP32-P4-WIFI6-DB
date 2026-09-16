@@ -12,7 +12,7 @@ ES8311 音频编解码器、microSD、USB 2.0 High-Speed OTG，以及 40 针扩�
 > **说明**
 >
 > 本页内容整理自三个来源：板级支持包（BSP）
-> [`components/esp32_p4_wifi6_db`](../../../components/esp32_p4_wifi6_db/)、
+> [`components/waveshare_bsp/esp32_p4_wifi6_db`](../../../components/waveshare_bsp/esp32_p4_wifi6_db/)、
 > 原理图 [`hardware/ESP32-P4-WIFI6-DB.pdf`](../../../hardware/ESP32-P4-WIFI6-DB.pdf)
 > 以及[官方 Wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB)。
 > GPIO 分配已在 BSP 与原理图网表之间交叉核对。机械/外观信息（板卡外形、接口具体型号）
@@ -216,9 +216,9 @@ GPIO24/GPIO25 同时是 ESP32-P4 全速 USB 1.1 PHY 的数据线；应用未启�
 
 ## 相关文档
 
-- [BSP README](../../../components/esp32_p4_wifi6_db/README_CN.md)
-- [BSP API 参考](../../../components/esp32_p4_wifi6_db/API_CN.md)
-- [BSP 更新日志](../../../components/esp32_p4_wifi6_db/CHANGELOG.md)
+- [BSP README](../../../components/waveshare_bsp/esp32_p4_wifi6_db/README_CN.md)
+- [BSP API 参考](../../../components/waveshare_bsp/esp32_p4_wifi6_db/API_CN.md)
+- [BSP 更新日志](../../../components/waveshare_bsp/esp32_p4_wifi6_db/CHANGELOG.md)
 - [原理图](../../../hardware/ESP32-P4-WIFI6-DB.pdf)
 - [官方 Wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB)
 - [产品页面](https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm)
