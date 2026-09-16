@@ -93,7 +93,7 @@ Replace `COMx` with the ESP32-P4 serial port. The monitor baud is read from
 `components/bsp_extra/idf_component.yml` resolves the BSP from:
 
 ```text
-../esp32_p4_wifi6_db
+../../components/esp32_p4_wifi6_db
 ```
 
 The build also creates and flashes the `storage` SPIFFS image. No MP3 file is

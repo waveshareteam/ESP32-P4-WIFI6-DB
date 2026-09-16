@@ -3,4 +3,4 @@ dependencies:
   idf:
     version: ">=5.0"
   esp32_p4_wifi6_db:
-    path: "../../../../firmware/esp32_p4_wifi6_db"
+    path: "../../../../components/esp32_p4_wifi6_db"

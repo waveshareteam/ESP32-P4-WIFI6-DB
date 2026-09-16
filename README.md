@@ -9,15 +9,15 @@ and schematic for the Waveshare ESP32-P4-WIFI6-DB development board.
 
 | Path | Contents |
 | --- | --- |
-| [firmware/esp32_p4_wifi6_db](firmware/esp32_p4_wifi6_db) | ESP-IDF BSP, headers, Kconfig and component manifest |
+| [components/esp32_p4_wifi6_db](components/esp32_p4_wifi6_db) | ESP-IDF BSP, headers, Kconfig and component manifest |
 | [examples/esp_idf](examples/esp_idf) | Peripheral examples |
 | [firmware/brookesia](firmware/brookesia/README.md) | ESP-Brookesia board integration application |
 | [examples/Arduino](examples/Arduino/README.md) | Arduino sketches and local board definitions |
 | [firmware/factory-firmware](firmware/factory-firmware) | ESP32-P4 images for 5, 7, 8 and 10.1-inch panels, and an ESP32-C5 slave image |
 | [hardware/ESP32-P4-WIFI6-DB.pdf](hardware/ESP32-P4-WIFI6-DB.pdf) | Board schematic |
 
-See the [BSP README](firmware/esp32_p4_wifi6_db/README.md) and
-[BSP API reference](firmware/esp32_p4_wifi6_db/API.md) for implementation details.
+See the [BSP README](components/esp32_p4_wifi6_db/README.md) and
+[BSP API reference](components/esp32_p4_wifi6_db/API.md) for implementation details.
 
 ## Board support
 
@@ -45,7 +45,7 @@ external peripherals.
 | `CONFIG_BSP_LCD_TYPE_800_1280_8_INCH_A` | JD9365, 8-inch | 800 × 1280 |
 | `CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A` | JD9365, 10.1-inch | 800 × 1280 |
 
-The [BSP Kconfig](firmware/esp32_p4_wifi6_db/Kconfig) defaults to **10.1-inch JD9365**.
+The [BSP Kconfig](components/esp32_p4_wifi6_db/Kconfig) defaults to **10.1-inch JD9365**.
 [Brookesia defaults](firmware/brookesia/sdkconfig.defaults) also select
 **10.1-inch JD9365**. Select the attached panel before building. Defaults do not
 replace an existing `sdkconfig`; check the project's configuration and generated

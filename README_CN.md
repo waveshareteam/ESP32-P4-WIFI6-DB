@@ -9,15 +9,15 @@ ESP-IDF 和 Arduino 示例、出厂固件及原理图。
 
 | 路径 | 内容 |
 | --- | --- |
-| [firmware/esp32_p4_wifi6_db](firmware/esp32_p4_wifi6_db) | ESP-IDF BSP、头文件、Kconfig 和组件清单 |
+| [components/esp32_p4_wifi6_db](components/esp32_p4_wifi6_db) | ESP-IDF BSP、头文件、Kconfig 和组件清单 |
 | [examples/esp_idf](examples/esp_idf) | 外设示例 |
 | [firmware/brookesia](firmware/brookesia/README_CN.md) | ESP-Brookesia 板级综合应用 |
 | [examples/Arduino](examples/Arduino/README_CN.md) | Arduino 示例及本地板卡定义 |
 | [firmware/factory-firmware](firmware/factory-firmware) | 5、7、8、10.1 英寸面板的 ESP32-P4 固件，以及 ESP32-C5 从机固件 |
 | [hardware/ESP32-P4-WIFI6-DB.pdf](hardware/ESP32-P4-WIFI6-DB.pdf) | 开发板原理图 |
 
-实现细节见 [BSP README](firmware/esp32_p4_wifi6_db/README_CN.md) 和
-[BSP API 参考](firmware/esp32_p4_wifi6_db/API_CN.md)。
+实现细节见 [BSP README](components/esp32_p4_wifi6_db/README_CN.md) 和
+[BSP API 参考](components/esp32_p4_wifi6_db/API_CN.md)。
 
 ## 板级支持
 
@@ -44,7 +44,7 @@ ESP-IDF 和 Arduino 示例、出厂固件及原理图。
 | `CONFIG_BSP_LCD_TYPE_800_1280_8_INCH_A` | JD9365，8 英寸 | 800 × 1280 |
 | `CONFIG_BSP_LCD_TYPE_800_1280_10_1_INCH_A` | JD9365，10.1 英寸 | 800 × 1280 |
 
-[BSP Kconfig](firmware/esp32_p4_wifi6_db/Kconfig) 默认选择 **10.1 英寸 JD9365**；
+[BSP Kconfig](components/esp32_p4_wifi6_db/Kconfig) 默认选择 **10.1 英寸 JD9365**；
 [Brookesia 默认配置](firmware/brookesia/sdkconfig.defaults) 也选择
 **10.1 英寸 JD9365**。构建前应选择实际连接的面板。默认配置不会覆盖已有的
 `sdkconfig`；判断实际生效选项时，应检查工程配置和生成的 `build/config/sdkconfig.h`。

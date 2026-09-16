@@ -3,7 +3,7 @@ dependencies:
     version: '>=5.5'
 
   esp32_p4_wifi6_db:
-    path: "../../../esp32_p4_wifi6_db"
+    path: "../../../../components/esp32_p4_wifi6_db"
 
   espressif/esp_wifi_remote:
     version: "*"
