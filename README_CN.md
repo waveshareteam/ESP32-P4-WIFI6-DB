@@ -108,6 +108,7 @@ idf.py -p COMx flash monitor
 | [06_wifi](examples/esp_idf/06_wifi) | Wi-Fi STA 联网和网关 ping |
 | [07_i2s_codec](examples/esp_idf/07_i2s_codec) | ES8311 内置音频播放或麦克风回放 |
 | [08_usb_host_msc](examples/esp_idf/08_usb_host_msc) | USB 大容量存储文件操作和顺序读写速度测试 |
+| [09_board_manager](examples/esp_idf/09_board_manager) | ESP Board Manager 初始化控制台和测试用例；使用 [`components/waveshare_bmgr`](components/waveshare_bmgr/README_zh.md)，编译前需 `pip install esp-bmgr-assist` 并执行 `idf.py bmgr` |
 
 接线和操作方法请查看各示例的 README 及配置。
 

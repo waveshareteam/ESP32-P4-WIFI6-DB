@@ -1,0 +1,22 @@
+dependencies:
+  # The board package (components/waveshare_bmgr) is pulled in through the
+  # waveshare_bmgr override_path entry at the bottom; `idf.py bmgr -c` must
+  # still point at that directory so the board YAML can be discovered.
+  espressif/esp_board_manager: "*"
+  espressif/esp_lcd_touch: ^1.1.2
+  espressif/esp_lvgl_port: '~2.8.0'
+  espressif/esp_new_jpeg: "*"
+  espressif/esp_image_effects:
+    version: "*"
+    rules:
+      - if: "$CONFIG{ESP_BOARD_DEV_CAMERA_SUPPORT} == True"
+  espressif/esp_video:
+    version: "^2.1.0"
+    rules:
+      - if: "$CONFIG{ESP_BOARD_DEV_CAMERA_SUPPORT} == True"
+  joltwallet/littlefs:
+    version: "^1.22.1"
+    rules:
+      - if: "$CONFIG{ESP_BOARD_DEV_LITTLEFS_SUPPORT} == True"
+  waveshare_bmgr:
+    override_path: "../../../../components/waveshare_bmgr"

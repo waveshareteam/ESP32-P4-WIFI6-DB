@@ -114,6 +114,7 @@ constraints.
 | [06_wifi](examples/esp_idf/06_wifi) | Wi-Fi station connection and gateway ping |
 | [07_i2s_codec](examples/esp_idf/07_i2s_codec) | ES8311 embedded audio playback or microphone loopback |
 | [08_usb_host_msc](examples/esp_idf/08_usb_host_msc) | USB mass-storage file operations and sequential read/write speed tests |
+| [09_board_manager](examples/esp_idf/09_board_manager) | ESP Board Manager bring-up console and test cases; uses [`components/waveshare_bmgr`](components/waveshare_bmgr/README.md) and needs `pip install esp-bmgr-assist` plus `idf.py bmgr` before building |
 
 See each example's README and configuration for wiring and operation.
 
