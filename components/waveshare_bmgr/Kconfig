@@ -1,0 +1,88 @@
+menu "Waveshare LCD"
+
+choice BSP_LCD_TYPE
+    prompt "Select LCD type"
+    default BSP_LCD_USE_BOARD_DEFAULT
+
+config BSP_LCD_USE_BOARD_DEFAULT
+    bool "Use LCD configuration from board YAML"
+    help
+        Use the LCD chip, timing, color format, reset GPIO, and other
+        parameters provided by the selected board's Board Manager YAML.
+
+config BSP_LCD_TYPE_800_800_3_4_INCH
+    bool "Waveshare 3.4-DSI-TOUCH-C Display"
+
+config BSP_LCD_TYPE_720_720_4_INCH
+    bool "Waveshare 4-DSI-TOUCH-C Display"
+
+config BSP_LCD_TYPE_480_800_4_INCH_A
+    bool "Waveshare 4-DSI-TOUCH-A Display"
+
+config BSP_LCD_TYPE_480_800_4_3_INCH_A
+    bool "Waveshare 4.3-DSI-TOUCH-A Display"
+
+config BSP_LCD_TYPE_720_1280_5_INCH_A
+    bool "Waveshare 5-DSI-TOUCH-A Display"
+
+config BSP_LCD_TYPE_720_1280_7_INCH_A
+    bool "Waveshare 7-DSI-TOUCH-A Display"
+
+config BSP_LCD_TYPE_1024_600_7_INCH_C
+    bool "Waveshare 7-DSI-TOUCH-C Display"
+
+config BSP_LCD_TYPE_800_1280_8_INCH_A
+    bool "Waveshare 8-DSI-TOUCH-A Display"
+
+config BSP_LCD_TYPE_480_1920_8_8_INCH_A
+    bool "Waveshare 8.8-DSI-TOUCH-A Display"
+
+config BSP_LCD_TYPE_720_1280_9_INCH_B
+    bool "Waveshare 9-DSI-TOUCH-B Display"
+
+config BSP_LCD_TYPE_800_1280_10_1_INCH_A
+    bool "Waveshare 10.1-DSI-TOUCH-A Display"
+
+config BSP_LCD_TYPE_720_1280_10_1_INCH_B
+    bool "Waveshare 10.1-DSI-TOUCH-B Display"
+
+endchoice
+
+choice BSP_LCD_COLOR_FORMAT
+    prompt "LCD color format"
+    default BSP_LCD_COLOR_FORMAT_RGB565
+
+config BSP_LCD_COLOR_FORMAT_RGB565
+    bool "RGB565"
+
+config BSP_LCD_COLOR_FORMAT_RGB888
+    bool "RGB888"
+
+endchoice
+
+config BSP_LCD_DPI_BUFFER_NUMS
+    int "MIPI DSI frame buffer count"
+    default 3
+    range 1 3
+    help
+        Number of full-screen frame buffers allocated by the MIPI DSI DPI panel.
+        Multiple buffers enable tear avoidance and are required by the LVGL
+        triple-buffer display path used by this project.
+
+config BSP_LCD_TYPE_AMENDS
+    bool "Enable LCD type amend overrides"
+    default n
+    help
+        Enable the panel factory overrides supplied by the selected LCD amend.
+        This is set by an LCD amend's sdkconfig.defaults.board file.
+
+config BSP_LCD_BRIGHTNESS_USE_I2C
+    bool "Use custom I2C LCD brightness controller"
+    default y
+    help
+        Enable the custom LCD brightness device implemented with the I2C
+        controller. Set this to n for an LCD amend that uses another
+        backlight control method, and override the lcd_brightness device in
+        that amend when a different Board Manager device type is required.
+
+endmenu

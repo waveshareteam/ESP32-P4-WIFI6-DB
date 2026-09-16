@@ -1,0 +1,7 @@
+version: "1.0"
+description: Waveshare 7-DSI-TOUCH-A (ILI9881C, 720x1280)
+apply:
+  - panel.yaml
+  - ../../lcd_panel_factory.c
+  - ../../include/waveshare_lcd.h
+  - sdkconfig.defaults.board

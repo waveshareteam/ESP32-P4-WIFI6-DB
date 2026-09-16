@@ -180,6 +180,7 @@ establish compatibility with freshly resolved host dependencies.
 | Path | Purpose |
 | --- | --- |
 | [`components/waveshare_bsp/esp32_p4_wifi6_db/`](components/waveshare_bsp/esp32_p4_wifi6_db/) | ESP-IDF BSP, headers, Kconfig and component manifest |
+| [`components/waveshare_bmgr/`](components/waveshare_bmgr/README.md) | ESP Board Manager board definition and LCD amends |
 | [`examples/esp_idf/`](examples/esp_idf/) | First-party ESP-IDF peripheral examples |
 | [`examples/Arduino/`](examples/Arduino/README.md) | Arduino sketches and local board definitions |
 | [`firmware/brookesia/`](firmware/brookesia/README.md) | ESP-Brookesia board integration application |

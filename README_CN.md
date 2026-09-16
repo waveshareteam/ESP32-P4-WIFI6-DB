@@ -169,6 +169,7 @@ idf.py -p COMx flash monitor
 | 路径 | 内容 |
 | --- | --- |
 | [`components/waveshare_bsp/esp32_p4_wifi6_db/`](components/waveshare_bsp/esp32_p4_wifi6_db/) | ESP-IDF BSP、头文件、Kconfig 和组件清单 |
+| [`components/waveshare_bmgr/`](components/waveshare_bmgr/README_zh.md) | ESP Board Manager 板卡定义和 LCD amend |
 | [`examples/esp_idf/`](examples/esp_idf/) | ESP-IDF 外设示例 |
 | [`examples/Arduino/`](examples/Arduino/README_CN.md) | Arduino 示例及本地板卡定义 |
 | [`firmware/brookesia/`](firmware/brookesia/README_CN.md) | ESP-Brookesia 板级综合应用 |

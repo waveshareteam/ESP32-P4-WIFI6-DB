@@ -1,0 +1,33 @@
+version: 1.0.0
+peripherals:
+  - name: dsi_display
+    config:
+      data_lanes: 2
+      phy_clk_src: 0
+      lane_bit_rate_mbps: 1000
+devices:
+  - name: display_lcd
+    chip: ili9881c
+    dependencies:
+      waveshare/esp_lcd_ili9881c: "*"
+    config:
+      bits_per_pixel: 16
+      dpi_config:
+        dpi_clock_freq_mhz: 80
+        in_color_format: LCD_COLOR_FMT_RGB565
+        out_color_format: LCD_COLOR_FMT_RGB565
+        num_fbs: 3
+        video_timing:
+          h_size: 720
+          v_size: 1280
+          hsync_back_porch: 239
+          hsync_pulse_width: 50
+          hsync_front_porch: 33
+          vsync_back_porch: 20
+          vsync_pulse_width: 30
+          vsync_front_porch: 2
+  - name: lcd_touch
+    config:
+      touch_config:
+        x_max: 720
+        y_max: 1280
