@@ -7,6 +7,7 @@
   <p>
     <a href="README.md">English</a> ·
     <a href="https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm">🛒 产品页面</a> ·
+    <a href="https://docs.waveshare.net/ESP32-P4-WIFI6-DB">📚 Wiki</a> ·
     <a href="components/esp32_p4_wifi6_db/">🔌 BSP</a> ·
     <a href="examples/esp_idf/">🧩 ESP-IDF 示例</a> ·
     <a href="examples/Arduino/">🔧 Arduino 示例</a> ·
@@ -40,6 +41,9 @@ MIPI-CSI 摄像头接口、ES8311 音频编解码器、microSD、USB 和扩展 G
 | 存储与扩展 | microSD（4-bit SDMMC）、USB Host、SPIFFS、扩展 GPIO |
 | 板级支持 | 本地组件 [`esp32_p4_wifi6_db`](components/esp32_p4_wifi6_db/) 0.0.1 |
 | 原理图 | [hardware/ESP32-P4-WIFI6-DB.pdf](hardware/ESP32-P4-WIFI6-DB.pdf) |
+
+完整引脚定义、40 针排针对照和逐个 GPIO 的分配见
+[硬件参考](docs/zh_CN/hw-reference/user-guide-esp32-p4-wifi6-db.md)。
 
 ### BSP 引脚分配
 
@@ -170,11 +174,14 @@ idf.py -p COMx flash monitor
 | [`firmware/brookesia/`](firmware/brookesia/README_CN.md) | ESP-Brookesia 板级综合应用 |
 | [`firmware/factory-firmware/`](firmware/factory-firmware/) | ESP32-P4 和 ESP32-C5 出厂固件 |
 | [`hardware/`](hardware/) | 开发板原理图 |
+| [`docs/`](docs/) | 硬件参考（引脚定义、GPIO 分配、使用注意） |
 | [`asserts/`](asserts/) | 文档使用的产品图片 |
 
 ## 📚 文档
 
 - [产品页面](https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm)
+- [官方 Wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB)
+- [硬件参考](docs/zh_CN/hw-reference/user-guide-esp32-p4-wifi6-db.md)
 - [BSP README](components/esp32_p4_wifi6_db/README_CN.md)
 - [BSP API 参考](components/esp32_p4_wifi6_db/API_CN.md)
 - [BSP 更新日志](components/esp32_p4_wifi6_db/CHANGELOG.md)

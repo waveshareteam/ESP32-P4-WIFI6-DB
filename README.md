@@ -7,6 +7,7 @@
   <p>
     <a href="README_CN.md">简体中文</a> ·
     <a href="https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm">🛒 Product Page</a> ·
+    <a href="https://docs.waveshare.net/ESP32-P4-WIFI6-DB">📚 Wiki</a> ·
     <a href="components/esp32_p4_wifi6_db/">🔌 BSP</a> ·
     <a href="examples/esp_idf/">🧩 ESP-IDF Examples</a> ·
     <a href="examples/Arduino/">🔧 Arduino Examples</a> ·
@@ -43,6 +44,9 @@ ordering information.
 | Storage and expansion | microSD (4-bit SDMMC), USB Host, SPIFFS, expansion-header GPIO |
 | Board support | Local component [`esp32_p4_wifi6_db`](components/esp32_p4_wifi6_db/) 0.0.1 |
 | Schematic | [hardware/ESP32-P4-WIFI6-DB.pdf](hardware/ESP32-P4-WIFI6-DB.pdf) |
+
+The full pinout, 40-pin header map and per-GPIO allocation are in the
+[hardware reference](docs/en/hw-reference/user-guide-esp32-p4-wifi6-db.md).
 
 ### BSP pin assignment
 
@@ -181,11 +185,14 @@ establish compatibility with freshly resolved host dependencies.
 | [`firmware/brookesia/`](firmware/brookesia/README.md) | ESP-Brookesia board integration application |
 | [`firmware/factory-firmware/`](firmware/factory-firmware/) | Prebuilt ESP32-P4 and ESP32-C5 images |
 | [`hardware/`](hardware/) | Board schematic |
+| [`docs/`](docs/) | Hardware reference (pinout, GPIO allocation, usage notes) |
 | [`asserts/`](asserts/) | Product images used by repository documentation |
 
 ## 📚 Documentation
 
 - [Product Page](https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm)
+- [Official Wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB)
+- [Hardware Reference](docs/en/hw-reference/user-guide-esp32-p4-wifi6-db.md)
 - [BSP README](components/esp32_p4_wifi6_db/README.md)
 - [BSP API Reference](components/esp32_p4_wifi6_db/API.md)
 - [BSP Changelog](components/esp32_p4_wifi6_db/CHANGELOG.md)
