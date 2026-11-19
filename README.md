@@ -105,7 +105,7 @@ ESP32-P4 does not contain an integrated radio. Wi-Fi and Bluetooth are provided 
 
 [`firmware/brookesia/`](firmware/brookesia/) contains the ESP-Brookesia application firmware source, including the GUI, settings, music player, video player, camera and other application components.
 
-[`firmware/factory-firmware/`](firmware/factory-firmware/) provides prebuilt firmware for the ESP32-P4 main processor and ESP32-C5 wireless coprocessor. They target different chips and use different flashing addresses; check the corresponding instructions and firmware versions before flashing. Their presence does not establish compatibility with freshly resolved dependencies.
+[`firmware/README.md`](firmware/README.md) lists the ESP32-P4 merged images for the 5, 7, 8 and 10.1-inch displays, with flashing instructions. The ESP32-C5 wireless coprocessor firmware is available as [`esp32-c5-slave-260623.bin`](firmware/ESP32-C5/esp32-c5-slave-260623.bin).
 
 ## 🗂️ Repository Layout
 
@@ -116,7 +116,7 @@ ESP32-P4 does not contain an integrated radio. Wi-Fi and Bluetooth are provided 
 | [`examples/esp_idf/`](examples/esp_idf/) | ESP-IDF peripheral and feature examples |
 | [`examples/Arduino/`](examples/Arduino/) | Arduino examples and local board definitions |
 | [`firmware/brookesia/`](firmware/brookesia/) | ESP-Brookesia application firmware source |
-| [`firmware/factory-firmware/`](firmware/factory-firmware/) | Prebuilt ESP32-P4 and ESP32-C5 firmware |
+| [`firmware/`](firmware/) | ESP32-P4 display firmware, ESP32-C5 coprocessor firmware and instructions |
 | [`hardware/`](hardware/) | Board schematic |
 | [`docs/`](docs/) | Hardware reference and project documentation |
 | [`asserts/`](asserts/) | Product images used by repository documentation |

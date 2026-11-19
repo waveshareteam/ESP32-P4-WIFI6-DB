@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "products": [
+    {
+      "id": "esp32-p4-wifi6-db",
+      "model": "ESP32-P4-WIFI6-DB",
+      "readme": {
+        "en": "firmware/README.md",
+        "zh": "firmware/README_ZH.md"
+      },
+      "files": [
+        "firmware/ESP32-P4-WIFI6-DB-10.1-DSI-TOUCH-A_Factory_20260804.bin",
+        "firmware/ESP32-P4-WIFI6-DB-5-DSI-TOUCH-A_Factory_20260804.bin",
+        "firmware/ESP32-P4-WIFI6-DB-7-DSI-TOUCH-A_Factory_20260804.bin",
+        "firmware/ESP32-P4-WIFI6-DB-8-DSI-TOUCH-A_Factory_20260804.bin"
+      ]
+    }
+  ]
+}
