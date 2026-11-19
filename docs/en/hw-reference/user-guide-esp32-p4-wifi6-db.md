@@ -222,8 +222,8 @@ The table lists every GPIO (0–54) and what it is connected to on the board.
 - GPIO14–GPIO19 are the ESP32-C5 SDIO link. Flashing an ESP32-P4 example
   does not update the ESP32-C5; keep the slave firmware compatible with the
   `esp_hosted` / `esp_wifi_remote` versions declared by each wireless project.
-  The prebuilt ESP32-C5 image is under
-  [`firmware/factory-firmware/ESP32-C5`](../../../firmware/factory-firmware/ESP32-C5/).
+  The prebuilt ESP32-C5 image is available as
+  [`esp32-c5-slave-260623.bin`](../../../firmware/ESP32-C5/esp32-c5-slave-260623.bin).
 - LCD reset, GT911 reset, and GT911 interrupt are not wired; the display and
   touch drivers handle this in software (polling for touch).
 - `bsp_sdcard_mount()` power-cycles the card (100 ms off, 200 ms settle)

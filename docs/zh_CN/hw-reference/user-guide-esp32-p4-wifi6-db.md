@@ -202,7 +202,7 @@ GPIO24/GPIO25 同时是 ESP32-P4 全速 USB 1.1 PHY 的数据线；应用未启�
 - GPIO14～GPIO19 为 ESP32-C5 的 SDIO 链路。烧录 ESP32-P4 示例不会更新 ESP32-C5；
   请确保从机固件与各无线工程声明的 `esp_hosted` / `esp_wifi_remote` 版本兼容。
   预编译的 ESP32-C5 固件位于
-  [`firmware/factory-firmware/ESP32-C5`](../../../firmware/factory-firmware/ESP32-C5/)。
+  [`esp32-c5-slave-260623.bin`](../../../firmware/ESP32-C5/esp32-c5-slave-260623.bin)。
 - LCD 复位、GT911 复位和中断信号均未接线，由显示/触摸驱动通过软件流程处理（触摸采用轮询）。
 - `bsp_sdcard_mount()` 会在 SDMMC 初始化前对卡电源做一次断电（100 ms）再上电（等待 200 ms）
   的循环，并启用内部上拉；板上 CMD 和 D0～D3 另有 51 kΩ 外部上拉。
