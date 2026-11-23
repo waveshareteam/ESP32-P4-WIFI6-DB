@@ -8,7 +8,7 @@
     <a href="LICENSE"><img alt="许可证" src="https://img.shields.io/github/license/waveshareteam/ESP32-P4-WIFI6-DB"></a>
   </p>
   <p>
-    <a href="https://www.waveshare.com/esp32-p4-wifi6-db.htm">🛒 产品</a> &middot;
+    <a href="https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm">🛒 产品</a> &middot;
     <a href="firmware/">📦 固件</a> &middot;
     <a href="examples/esp-idf/">🧩 ESP-IDF</a> &middot;
     <a href="examples/arduino/examples/">🔧 Arduino</a> &middot;
@@ -21,32 +21,28 @@
 
 ## ✨ 概述
 
-Waveshare ESP32-P4-WIFI6-DB 是一款以 ESP32-P4 为主控、通过 SDIO 连接 ESP32-C5 无线协处理器的多媒体开发板。本仓库提供 ESP-IDF 和 Arduino 示例、开源出厂固件源码、实测出厂固件以及硬件原理图。
+**ESP32-P4-WIFI6-DB** 是一款基于 ESP32-P4 处理器与 ESP32-C5 Wi-Fi 6 / BLE 无线协处理器的开发板，集成双 lane MIPI-DSI 显示与 GT911 触摸、MIPI-CSI 摄像头、ES8311 音频编解码、microSD 卡槽、USB Host 及扩展排针 GPIO。
+
+本仓库提供配套的 ESP-IDF 示例、包含本地板卡定义的 Arduino 示例、ESP-Brookesia 出厂固件源码、预编译出厂固件以及硬件原理图。建议先运行 [00_board_check](examples/esp-idf/00_board_check/) 示例，确认编译、烧录与串口监视流程正常。
 
 | 功能 | 器件或接口 |
 | --- | --- |
-| MCU | ESP32-P4（双核 RISC-V 最高 360 MHz + 低功耗核）、ESP32-C5（通过 SDIO 提供 Wi-Fi 6 / 蓝牙） |
-| 存储器 | 32 MB Flash，32 MB PSRAM |
-| 显示 | 2 通道 MIPI-DSI（支持外接 5 / 7 / 8 / 10.1 寸微雪 DSI 触摸屏） |
-| 触摸 | GT911 电容触摸控制器（I2C） |
-| 摄像头 | MIPI-CSI（OV5647） |
-| 音频 | ES8311 编解码器、模拟麦克风输入与扬声器功放 |
-| 存储与扩展 | microSD（4 位 SDMMC）、USB Host、扩展排针 GPIO |
+| MCU | ESP32-P4（双核高性能 RISC-V + 低功耗核） |
+| 无线连接 | ESP32-C5 无线协处理器（支持 Wi-Fi 6 & BLE，4-bit SDIO） |
+| 存储器 | 板载 32 MB Flash 与 32 MB PSRAM |
+| 显示接口 | 双 lane MIPI-DSI 接口，I2C 背光控制（支持 [5-DSI-TOUCH-A](https://www.waveshare.net/shop/5-DSI-TOUCH-A.htm)、[7-DSI-TOUCH-A](https://www.waveshare.net/shop/7-DSI-TOUCH-A.htm)、[8-DSI-TOUCH-A](https://www.waveshare.net/shop/8-DSI-TOUCH-A.htm)、[10.1-DSI-TOUCH-A](https://www.waveshare.net/shop/10.1-DSI-TOUCH-A.htm)） |
+| 触摸 | GT911 电容触摸（I2C 接口） |
+| 摄像头 | 板载 MIPI-CSI 接口，支持 OV5647（[RPi Camera (B)](https://www.waveshare.net/shop/RPi-Camera-B.htm)）摄像头模组 |
+| 音频 | ES8311 音频编解码芯片（I2C + I2S），支持扬声器功放与模拟麦克风输入 |
+| 扩展存储 | 板载 microSD 卡槽，通过 4-bit SDMMC 接口高速读写 |
+| USB | USB Host（USB-C OTG 接口） |
+| 扩展接口 | 扩展排针 GPIO |
 
-### 支持的屏幕
-
-| 面板 | 控制器 | 分辨率 |
-| --- | --- | --- |
-| [Waveshare 5-DSI-TOUCH-A](https://www.waveshare.net/shop/5-DSI-TOUCH-A.htm) | HX8394，5 英寸 | 720 × 1280 |
-| [Waveshare 7-DSI-TOUCH-A](https://www.waveshare.net/shop/7-DSI-TOUCH-A.htm) | ILI9881C，7 英寸 | 720 × 1280 |
-| [Waveshare 8-DSI-TOUCH-A](https://www.waveshare.net/shop/8-DSI-TOUCH-A.htm) | JD9365，8 英寸 | 800 × 1280 |
-| [Waveshare 10.1-DSI-TOUCH-A](https://www.waveshare.net/shop/10.1-DSI-TOUCH-A.htm) | JD9365，10.1 英寸 | 800 × 1280 |
-
-构建显示相关示例前，请确认所选面板与实际连接的屏幕型号匹配。
+编译显示相关示例前，请确认所选屏幕型号与实物一致（ESP-IDF 示例在 `idf.py menuconfig` 的 `Board Support Package` 中选择，Arduino 示例在代码中选择）。
 
 ### ESP32-P4 与 ESP32-C5 无线
 
-ESP32-P4 本身不集成射频，Wi-Fi 6 和蓝牙由板载 ESP32-C5 协处理器通过 SDIO 上的 ESP-Hosted 提供。ESP32-C5 需要兼容的从机固件；烧录 ESP32-P4 示例不会更新 C5。修改或重新烧录协处理器前，请确认从机固件与 P4 工程使用的 ESP-Hosted 和 `esp_wifi_remote` 组件版本兼容。预编译的 ESP32-C5 从机固件位于 [`firmware/ESP32-C5/esp32-c5-slave-260623.bin`](firmware/ESP32-C5/esp32-c5-slave-260623.bin)（说明见 [`firmware/README_ZH.md`](firmware/README_ZH.md)）。
+ESP32-P4 本身不集成射频，Wi-Fi 6 和蓝牙由板载 ESP32-C5 协处理器通过 SDIO 上的 ESP-Hosted 提供。开发板出厂时已在 ESP32-C5 中预烧兼容的从机固件，烧录 ESP32-P4 示例不会影响 C5。仓库中提供了一份预编译从机固件 [`firmware/ESP32-C5/esp32-c5-slave-260623.bin`](firmware/ESP32-C5/esp32-c5-slave-260623.bin)；如果修改或升级了 P4 工程的 ESP-Hosted 组件版本，需基于官方仓库 [espressif/esp-hosted-mcu](https://github.com/espressif/esp-hosted-mcu) 编译对应版本的从机固件。
 
 ## 📦 快速开始
 
@@ -101,7 +97,7 @@ Arduino-ESP32 `3.3.11` 的板级支持文件位于 [`examples/arduino/esp32`](ex
 ## 📚 资料
 
 - [原理图](hardware/schematic/)
-- [产品页](https://www.waveshare.com/esp32-p4-wifi6-db.htm)
+- [产品页](https://www.waveshare.net/shop/ESP32-P4-WIFI6-DB.htm)
 - [Wiki](https://docs.waveshare.net/ESP32-P4-WIFI6-DB/)
 
 ## 🤝 支持

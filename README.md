@@ -21,32 +21,28 @@
 
 ## ✨ Overview
 
-The Waveshare ESP32-P4-WIFI6-DB is a multimedia development board powered by the ESP32-P4 main processor and an onboard ESP32-C5 wireless coprocessor over SDIO. This repository provides ESP-IDF and Arduino examples, open-source factory firmware, prebuilt factory binaries, and hardware schematics.
+**ESP32-P4-WIFI6-DB** is a development board built around the ESP32-P4 processor and an ESP32-C5 Wi-Fi 6 / Bluetooth LE wireless coprocessor over SDIO. It integrates 2-lane MIPI-DSI display and GT911 touch, MIPI-CSI camera, ES8311 audio, microSD, USB Host, and expansion GPIO.
+
+This repository provides ESP-IDF examples, Arduino examples with a local board definition, the ESP-Brookesia factory firmware source, prebuilt factory binaries, and hardware schematics. Run [00_board_check](examples/esp-idf/00_board_check/) first to verify building, flashing, and serial monitoring.
 
 | Feature | Device / interface |
 | --- | --- |
-| MCU | ESP32-P4 (dual-core RISC-V up to 360 MHz + LP core), ESP32-C5 (Wi-Fi 6 / Bluetooth via SDIO) |
-| Memory | 32 MB Flash, 32 MB PSRAM |
-| Display | 2-lane MIPI-DSI (supports external 5, 7, 8, and 10.1-inch Waveshare DSI touch panels) |
-| Touch | GT911 capacitive touch controller (I2C) |
-| Camera | MIPI-CSI (OV5647) |
-| Audio | ES8311 codec, analog microphone input, and speaker amplifier |
-| Storage & expansion | microSD (4-bit SDMMC), USB Host, expansion GPIO |
+| MCU | ESP32-P4 (dual-core RISC-V HP + LP core) |
+| Wireless | ESP32-C5 wireless coprocessor (Wi-Fi 6 & BLE, 4-bit SDIO) |
+| Memory | On-board 32 MB Flash and 32 MB PSRAM |
+| Display | 2-lane MIPI-DSI interface with I2C backlight control (supports [5-DSI-TOUCH-A](https://www.waveshare.com/5-DSI-TOUCH-A.htm), [7-DSI-TOUCH-A](https://www.waveshare.com/7-DSI-TOUCH-A.htm), [8-DSI-TOUCH-A](https://www.waveshare.com/8-DSI-TOUCH-A.htm), [10.1-DSI-TOUCH-A](https://www.waveshare.com/10.1-DSI-TOUCH-A.htm)) |
+| Touch | GT911 capacitive touch (I2C interface) |
+| Camera | On-board MIPI-CSI interface supporting OV5647 ([RPi Camera (B)](https://www.waveshare.com/rpi-camera-b.htm)) camera module |
+| Audio | ES8311 audio codec (I2C + I2S) with speaker amplifier and analog microphone input |
+| Storage | On-board microSD slot over 4-bit SDMMC |
+| USB | USB Host (USB-C OTG) |
+| Expansion | Expansion GPIO header |
 
-### Supported Displays
-
-| Panel | Controller | Resolution |
-| --- | --- | --- |
-| [Waveshare 5-DSI-TOUCH-A](https://www.waveshare.net/shop/5-DSI-TOUCH-A.htm) | HX8394, 5-inch | 720 × 1280 |
-| [Waveshare 7-DSI-TOUCH-A](https://www.waveshare.net/shop/7-DSI-TOUCH-A.htm) | ILI9881C, 7-inch | 720 × 1280 |
-| [Waveshare 8-DSI-TOUCH-A](https://www.waveshare.net/shop/8-DSI-TOUCH-A.htm) | JD9365, 8-inch | 800 × 1280 |
-| [Waveshare 10.1-DSI-TOUCH-A](https://www.waveshare.net/shop/10.1-DSI-TOUCH-A.htm) | JD9365, 10.1-inch | 800 × 1280 |
-
-Before building display examples, make sure the selected panel matches the connected display.
+Before building display examples, make sure the selected panel matches the connected display (configured under `Board Support Package` in `idf.py menuconfig` for ESP-IDF, or in the sketch for Arduino).
 
 ### ESP32-P4 and ESP32-C5 Wireless
 
-ESP32-P4 does not contain an integrated radio. Wi-Fi 6 and Bluetooth are provided by the onboard ESP32-C5 coprocessor over SDIO using ESP-Hosted. ESP32-C5 requires compatible slave firmware; flashing an ESP32-P4 example does not update the C5. Before changing or reflashing the coprocessor, check that its firmware is compatible with the ESP-Hosted and `esp_wifi_remote` component versions used by the P4 project. The prebuilt ESP32-C5 slave firmware is available at [`firmware/ESP32-C5/esp32-c5-slave-260623.bin`](firmware/ESP32-C5/esp32-c5-slave-260623.bin) (see [`firmware/README.md`](firmware/README.md)).
+ESP32-P4 does not contain an integrated radio. Wi-Fi 6 and Bluetooth are provided by the onboard ESP32-C5 coprocessor over SDIO using ESP-Hosted. The board ships with compatible slave firmware pre-flashed on the ESP32-C5, and flashing an ESP32-P4 example does not overwrite it. A prebuilt slave binary is included at [`firmware/ESP32-C5/esp32-c5-slave-260623.bin`](firmware/ESP32-C5/esp32-c5-slave-260623.bin); if you update the ESP-Hosted component in your P4 project, build a matching slave firmware from the official [espressif/esp-hosted-mcu](https://github.com/espressif/esp-hosted-mcu) repository.
 
 ## 📦 Quick Start
 
