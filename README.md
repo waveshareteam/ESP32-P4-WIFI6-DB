@@ -34,6 +34,17 @@ The Waveshare ESP32-P4-WIFI6-DB is a multimedia development board powered by the
 | Storage & expansion | microSD (4-bit SDMMC), USB Host, expansion GPIO |
 | Board support | Managed component `waveshare/waveshare_boards`, local BSP `esp32_p4_wifi6_db` |
 
+### Supported Displays
+
+| Panel | Controller | Resolution |
+| --- | --- | --- |
+| [Waveshare 5-DSI-TOUCH-A](https://www.waveshare.net/shop/5-DSI-TOUCH-A.htm) | HX8394, 5-inch | 720 × 1280 |
+| [Waveshare 7-DSI-TOUCH-A](https://www.waveshare.net/shop/7-DSI-TOUCH-A.htm) | ILI9881C, 7-inch | 720 × 1280 |
+| [Waveshare 8-DSI-TOUCH-A](https://www.waveshare.net/shop/8-DSI-TOUCH-A.htm) | JD9365, 8-inch | 800 × 1280 |
+| [Waveshare 10.1-DSI-TOUCH-A](https://www.waveshare.net/shop/10.1-DSI-TOUCH-A.htm) | JD9365, 10.1-inch | 800 × 1280 |
+
+Before building display examples, make sure the selected panel matches the connected display.
+
 ## 📦 Quick Start
 
 The fastest way to try an example is a ready-to-flash package from the

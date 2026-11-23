@@ -34,6 +34,17 @@ Waveshare ESP32-P4-WIFI6-DB 是一款以 ESP32-P4 为主控、通过 SDIO 连接
 | 存储与扩展 | microSD（4 位 SDMMC）、USB Host、扩展排针 GPIO |
 | 板级支持 | 托管组件 `waveshare/waveshare_boards`、本地 BSP `esp32_p4_wifi6_db` |
 
+### 支持的屏幕
+
+| 面板 | 控制器 | 分辨率 |
+| --- | --- | --- |
+| [Waveshare 5-DSI-TOUCH-A](https://www.waveshare.net/shop/5-DSI-TOUCH-A.htm) | HX8394，5 英寸 | 720 × 1280 |
+| [Waveshare 7-DSI-TOUCH-A](https://www.waveshare.net/shop/7-DSI-TOUCH-A.htm) | ILI9881C，7 英寸 | 720 × 1280 |
+| [Waveshare 8-DSI-TOUCH-A](https://www.waveshare.net/shop/8-DSI-TOUCH-A.htm) | JD9365，8 英寸 | 800 × 1280 |
+| [Waveshare 10.1-DSI-TOUCH-A](https://www.waveshare.net/shop/10.1-DSI-TOUCH-A.htm) | JD9365，10.1 英寸 | 800 × 1280 |
+
+构建显示相关示例前，请确认所选面板与实际连接的屏幕型号匹配。
+
 ## 📦 快速开始
 
 体验示例最快的方法是使用[最新版本](https://github.com/waveshareteam/ESP32-P4-WIFI6-DB/releases/latest)中打包好的可烧录固件。
