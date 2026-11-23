@@ -5,11 +5,7 @@
   "tier": 0,
   "target": "esp32p4",
   "esp_idf": {
-    "versions": ["v5.5.6", "v6.1.0"]
-  },
-  "arduino": {
-    "core": "3.3.11",
-    "fqbn": "esp32:esp32:esp32p4:FlashSize=32M,PSRAM=enabled"
+    "versions": ["v5.5.6", "v6.1"]
   },
   "factory_firmware": {
     "esp_idf": "v5.5.6"
