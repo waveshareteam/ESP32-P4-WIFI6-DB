@@ -44,6 +44,10 @@ The Waveshare ESP32-P4-WIFI6-DB is a multimedia development board powered by the
 
 Before building display examples, make sure the selected panel matches the connected display.
 
+### ESP32-P4 and ESP32-C5 Wireless
+
+ESP32-P4 does not contain an integrated radio. Wi-Fi 6 and Bluetooth are provided by the onboard ESP32-C5 coprocessor over SDIO using ESP-Hosted. ESP32-C5 requires compatible slave firmware; flashing an ESP32-P4 example does not update the C5. Before changing or reflashing the coprocessor, check that its firmware is compatible with the ESP-Hosted and `esp_wifi_remote` component versions used by the P4 project. The prebuilt ESP32-C5 slave firmware is available at [`firmware/ESP32-C5/esp32-c5-slave-260623.bin`](firmware/ESP32-C5/esp32-c5-slave-260623.bin) (see [`firmware/README.md`](firmware/README.md)).
+
 ## 📦 Quick Start
 
 The fastest way to try an example is a ready-to-flash package from the

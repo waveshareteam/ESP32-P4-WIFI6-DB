@@ -44,6 +44,10 @@ Waveshare ESP32-P4-WIFI6-DB 是一款以 ESP32-P4 为主控、通过 SDIO 连接
 
 构建显示相关示例前，请确认所选面板与实际连接的屏幕型号匹配。
 
+### ESP32-P4 与 ESP32-C5 无线
+
+ESP32-P4 本身不集成射频，Wi-Fi 6 和蓝牙由板载 ESP32-C5 协处理器通过 SDIO 上的 ESP-Hosted 提供。ESP32-C5 需要兼容的从机固件；烧录 ESP32-P4 示例不会更新 C5。修改或重新烧录协处理器前，请确认从机固件与 P4 工程使用的 ESP-Hosted 和 `esp_wifi_remote` 组件版本兼容。预编译的 ESP32-C5 从机固件位于 [`firmware/ESP32-C5/esp32-c5-slave-260623.bin`](firmware/ESP32-C5/esp32-c5-slave-260623.bin)（说明见 [`firmware/README_ZH.md`](firmware/README_ZH.md)）。
+
 ## 📦 快速开始
 
 体验示例最快的方法是使用[最新版本](https://github.com/waveshareteam/ESP32-P4-WIFI6-DB/releases/latest)中打包好的可烧录固件。
