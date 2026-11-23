@@ -32,7 +32,6 @@ The Waveshare ESP32-P4-WIFI6-DB is a multimedia development board powered by the
 | Camera | MIPI-CSI (OV5647) |
 | Audio | ES8311 codec, analog microphone input, and speaker amplifier |
 | Storage & expansion | microSD (4-bit SDMMC), USB Host, expansion GPIO |
-| Board support | Managed component `waveshare/waveshare_boards`, local BSP `esp32_p4_wifi6_db` |
 
 ### Supported Displays
 

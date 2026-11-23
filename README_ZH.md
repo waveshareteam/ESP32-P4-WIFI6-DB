@@ -32,7 +32,6 @@ Waveshare ESP32-P4-WIFI6-DB 是一款以 ESP32-P4 为主控、通过 SDIO 连接
 | 摄像头 | MIPI-CSI（OV5647） |
 | 音频 | ES8311 编解码器、模拟麦克风输入与扬声器功放 |
 | 存储与扩展 | microSD（4 位 SDMMC）、USB Host、扩展排针 GPIO |
-| 板级支持 | 托管组件 `waveshare/waveshare_boards`、本地 BSP `esp32_p4_wifi6_db` |
 
 ### 支持的屏幕
 
