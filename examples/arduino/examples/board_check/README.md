@@ -1,33 +1,32 @@
 # board_check
 
-[中文版本](./README_CN.md)
+[English](README.md) | [简体中文](README_ZH.md)
 
-## Purpose
+## What It Does
 
-Reads and prints the board's chip model, chip revision, CPU information, Flash
-size, PSRAM size and free heap. The sketch does not touch the LCD, camera,
-audio, SDMMC or ESP-Hosted, so no additional peripherals need to be connected.
+Prints chip model, Flash size, PSRAM size, and serial-port diagnostics over UART.
 
-## Usage
+## Hardware Required
 
-1. Select `Waveshare ESP32-P4-WIFI6-DB` in the Arduino IDE.
-2. Open `board_check.ino`, compile and upload.
-3. Open the serial monitor at `115200` baud.
-4. Read the board information output.
+- ESP32-P4-WIFI6-DB development board
 
-## Expected output
+## How to Run
 
-The sketch prints a block like the following once at startup. The actual CPU
-frequency and memory values depend on the board and on the Arduino board menu
-configuration:
+1. Install the `esp32` board package (Arduino-ESP32 `3.3.11`) and apply the board files in `examples/arduino/esp32/` if needed.
+2. Select the board and the **Tools** menu options that match `.github/product.json`:
 
-```text
-Waveshare ESP32-P4-WIFI6-DB
-Chip model: ESP32-P4
-Chip revision: ...
-CPU cores: ...
-CPU frequency: ... MHz
-Flash size: ... MB
-PSRAM size: ... MB
-Free heap: ... bytes
-```
+   | Tools menu | Value |
+   | --- | --- |
+   | Board | ESP32P4 Dev Module (or Waveshare ESP32-P4-WIFI6-DB) |
+   | Flash Size | 32MB (256Mb) |
+   | PSRAM | Enabled |
+
+3. Open the `.ino` file and upload.
+
+## Expected Result
+
+Serial monitor (115200 baud) prints chip info, 32 MB Flash, and PSRAM size.
+
+## Troubleshooting
+
+None yet.

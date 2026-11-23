@@ -21,4 +21,4 @@ python -m esptool --chip esp32p4 --port <PORT> erase-flash
 python -m esptool --chip esp32p4 --port <PORT> write-flash 0x0 ESP32-P4-WIFI6-DB-10.1-DSI-TOUCH-A_Factory_20260804.bin
 ```
 
-ESP32-C5 无线协处理器的固件位于 [esp32-c5-slave-260623.bin](ESP32-C5/esp32-c5-slave-260623.bin)。ESP-Brookesia 示例见 [brookesia/README_CN.md](brookesia/README_CN.md)。
+ESP32-C5 无线协处理器的固件位于 [esp32-c5-slave-260623.bin](ESP32-C5/esp32-c5-slave-260623.bin)。ESP-Brookesia 出厂固件源码见 [examples/factory/README_ZH.md](../examples/factory/README_ZH.md)。

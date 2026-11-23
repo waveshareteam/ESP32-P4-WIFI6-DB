@@ -1,34 +1,32 @@
 # i2c
 
-[中文版本](./README_CN.md)
+[English](README.md) | [简体中文](README_ZH.md)
 
-## Purpose
+## What It Does
 
-Scans the board's default I2C1 bus and prints the 7-bit I2C addresses that
-respond. This board uses SDA GPIO7 and SCL GPIO8 at 400 kHz by default. The
-scanner only lists addresses that return an ACK; finding no device does not by
-itself indicate a fault.
+Scans the shared I2C bus (`Wire1`) and prints all detected 7-bit device addresses.
 
-## Usage
+## Hardware Required
 
-1. Connect the I2C devices you want to detect to the board's I2C bus.
-2. Select `Waveshare ESP32-P4-WIFI6-DB` in the Arduino IDE.
-3. Open `i2c.ino`, compile and upload.
-4. Open the serial monitor at `115200` baud.
-5. Read the scan result; the sketch rescans every 5 seconds.
+- ESP32-P4-WIFI6-DB development board
 
-## Notes
+## How to Run
 
-- This bus is shared with onboard devices such as the ES8311, the LCD
-  backlight, the GT911 and the camera SCCB. Do not run another example that
-  also initializes I2C1 at the same time.
-- The printed addresses are the 7-bit addresses used by Arduino `Wire1`, not
-  the 8-bit control bytes that include the read/write bit.
+1. Install the `esp32` board package (Arduino-ESP32 `3.3.11`) and apply the board files in `examples/arduino/esp32/` if needed.
+2. Select the board and the **Tools** menu options that match `.github/product.json`:
 
-## Expected output
+   | Tools menu | Value |
+   | --- | --- |
+   | Board | ESP32P4 Dev Module (or Waveshare ESP32-P4-WIFI6-DB) |
+   | Flash Size | 32MB (256Mb) |
+   | PSRAM | Enabled |
 
-```text
-Scanning I2C bus...
-Device found at 0x...
-Scan complete: ... device(s) found
-```
+3. Open the `.ino` file and upload.
+
+## Expected Result
+
+Serial monitor lists detected I2C addresses on `Wire1`.
+
+## Troubleshooting
+
+None yet.

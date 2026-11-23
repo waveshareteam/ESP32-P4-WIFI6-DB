@@ -1,47 +1,32 @@
-# GPIO Console Example
+# gpio
 
-[中文版本](./README_CN.md)
+[English](README.md) | [简体中文](README_ZH.md)
 
-This example uses the Arduino-ESP32 `Console` library to configure and test GPIOs interactively through the serial monitor. It is based on the Arduino core `ConsoleGPIO` example.
+## What It Does
 
-## Requirements
+Monitors expansion-header GPIO input levels and logs state changes over UART.
 
-- Select `Waveshare ESP32-P4-WIFI6-DB` in Arduino IDE.
-- Use the USB serial port and set the serial monitor to `115200` baud.
-- Ensure the Arduino-ESP32 `Console` library is available. It is included with the Arduino core installation.
+## Hardware Required
 
-## Usage
+- ESP32-P4-WIFI6-DB development board
 
-After uploading, open the serial monitor, set line ending to `Newline`, and enter `help` to list commands.
+## How to Run
 
-```text
-gpio read <pin>
-gpio write <pin> <0|1>
-gpio mode <pin> <in|out|in_pu|in_pd>
-```
+1. Install the `esp32` board package (Arduino-ESP32 `3.3.11`) and apply the board files in `examples/arduino/esp32/` if needed.
+2. Select the board and the **Tools** menu options that match `.github/product.json`:
 
-Examples:
+   | Tools menu | Value |
+   | --- | --- |
+   | Board | ESP32P4 Dev Module (or Waveshare ESP32-P4-WIFI6-DB) |
+   | Flash Size | 32MB (256Mb) |
+   | PSRAM | Enabled |
 
-```text
-gpio mode 2 out
-gpio write 2 0
-gpio write 2 1
-gpio mode 4 in_pu
-gpio read 4
-```
+3. Open the `.ino` file and upload.
 
-## Board Notes
+## Expected Result
 
-- This board variant does not define an onboard `LED_BUILTIN`; GPIO2 and GPIO3
-  are treated as ordinary header GPIOs by this example.
-- Do not use GPIOs reserved by onboard peripherals while their corresponding examples or features are active. This includes the MIPI display, touch controller, camera, SDMMC, ESP-Hosted SDIO, audio codec, and RS485/RS232 transceivers.
-- Use `gpio mode` before `gpio write`. Writing a pin configured as an input is not a valid output test.
+Serial monitor prints GPIO input readings when pins are toggled.
 
-## Expected Output
+## Troubleshooting
 
-```text
-gpio> gpio mode 2 out
-GPIO 2 mode set to out
-gpio> gpio read 2
-GPIO 2 = 0 (LOW)
-```
+None yet.

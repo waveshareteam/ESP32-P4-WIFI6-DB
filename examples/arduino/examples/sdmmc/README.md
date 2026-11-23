@@ -1,42 +1,33 @@
 # sdmmc
 
-[中文版本](./README_CN.md)
+[English](README.md) | [简体中文](README_ZH.md)
 
-## Purpose
+## What It Does
 
-Initializes the onboard microSD card over the 4-bit SDMMC interface, prints the
-card and filesystem capacity, and writes and reads back a test file. The sketch
-turns on card power by itself; no extra GPIO handling is required.
+Mounts a microSD card over 4-bit SDMMC and performs file read/write verification.
 
-## Usage
+## Hardware Required
 
-1. Insert a microSD card into the board.
-2. Select `Waveshare ESP32-P4-WIFI6-DB` in the Arduino IDE.
-3. Open `sdmmc.ino`, compile and upload.
-4. Open the serial monitor at `115200` baud.
-5. Read the card information and the write/read result for
-   `/arduino_test.txt`.
+- ESP32-P4-WIFI6-DB development board
+- FAT32-formatted microSD card
 
-## Board wiring
+## How to Run
 
-- SDMMC CLK/CMD: GPIO43/GPIO44.
-- SDMMC D0-D3: GPIO39/GPIO40/GPIO41/GPIO42.
-- Card power control: GPIO45, active low.
+1. Install the `esp32` board package (Arduino-ESP32 `3.3.11`) and apply the board files in `examples/arduino/esp32/` if needed.
+2. Select the board and the **Tools** menu options that match `.github/product.json`:
 
-## Expected output
+   | Tools menu | Value |
+   | --- | --- |
+   | Board | ESP32P4 Dev Module (or Waveshare ESP32-P4-WIFI6-DB) |
+   | Flash Size | 32MB (256Mb) |
+   | PSRAM | Enabled |
 
-```text
-Starting SDMMC test
-SD card detected: ...
-Card size: ... MB
-Filesystem total: ... MB
-Writing /arduino_test.txt
-Reading /arduino_test.txt
-ESP32-P4 SDMMC test
-SDMMC test completed successfully
-```
+3. Open the `.ino` file and upload.
 
-If mounting fails, first confirm that the card is inserted and formatted in a
-recognizable filesystem, then check whether another example is holding the
-SDMMC pins. The test file is created in the card's root directory and can be
-deleted manually afterwards.
+## Expected Result
+
+Serial monitor prints card size and read/write verification results.
+
+## Troubleshooting
+
+Ensure the microSD card is inserted before powering on.

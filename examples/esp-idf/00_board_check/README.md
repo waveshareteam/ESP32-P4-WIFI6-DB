@@ -1,68 +1,25 @@
-# Board Check
+# 00_board_check
 
-[中文版本](./README_CN.md)
+[English](README.md) | [简体中文](README_ZH.md)
 
-This is the recommended first ESP-IDF example for this repository.
+## What It Does
 
-It does not require any external module, display, camera, SD card, network, or
-audio codec. It only prints board and runtime information through the serial
-monitor, then keeps running so beginners can confirm that the toolchain,
-flashing process, and serial monitor are working.
-
-If your board uses an early ESP32-P4 engineering sample earlier than rev v3.0,
-or you need to pin a production build to rev v3.0/v3.1, set the minimum and
-maximum chip revision before flashing under
-`idf.py menuconfig` → Component config → Hardware Settings → Chip revision.
-
-## What You Will Learn
-
-- How to build and flash an ESP-IDF project.
-- How to confirm the target is `esp32p4`.
-- How to read chip, flash, PSRAM, and heap information from serial output.
-- How to confirm the chip revision family before moving to peripheral demos.
-- How to keep the serial monitor open and watch periodic logs.
+Prints chip model, Flash size, PSRAM size, and serial-port information to verify the basic bring-up environment.
 
 ## Hardware Required
 
-- One supported ESP32-P4 board.
-- USB cable for flashing and serial monitor.
+- ESP32-P4-WIFI6-DB development board
 
-No other hardware is required.
-
-## Build and Flash
+## How to Run
 
 ```bash
-cd examples/esp_idf/00_board_check
-idf.py set-target esp32p4
-idf.py build
-idf.py -p PORT flash monitor
+idf.py set-target esp32p4 build flash monitor
 ```
 
-Replace `PORT` with your serial port, for example `COM7` on Windows or
-`/dev/ttyACM0` on Linux.
+## Expected Result
 
-## Expected Output
+Serial monitor outputs chip revision, CPU frequency, 32 MB Flash, and PSRAM size.
 
-The serial monitor should show output similar to:
+## Troubleshooting
 
-```text
-========================================
- ESP32-P4 Platform Board Check
-========================================
-IDF target: esp32p4
-CPU cores: 2
-Flash size: 16 MB
-PSRAM: initialized
-Board check is running. Open the serial monitor and confirm this output.
-```
-
-The example prints an `alive` log every five seconds. If you can see that log,
-your build, flash, and monitor workflow is ready for the other examples.
-
-## Next Steps
-
-- Run [01_gpio_input](../01_gpio_input/) to bring up the display.
-- Run [02_i2c_console](../02_i2c_console/) if you want to scan I2C
-  devices.
-- Read the repository [README](../../../README.md) to choose the next example
-  for your board.
+None yet.
