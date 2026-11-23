@@ -8,11 +8,11 @@
     <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/waveshareteam/ESP32-P4-WIFI6-DB"></a>
   </p>
   <p>
-    <a href="https://www.waveshare.com/esp32-p4-wifi6-db.htm">🌐 Product</a> &middot;
+    <a href="https://www.waveshare.com/esp32-p4-wifi6-db.htm">🛒 Product</a> &middot;
     <a href="firmware/">📦 Firmware</a> &middot;
     <a href="examples/esp-idf/">🧩 ESP-IDF</a> &middot;
     <a href="examples/arduino/examples/">🔧 Arduino</a> &middot;
-    <a href="https://www.waveshare.com/wiki/ESP32-P4-WIFI6-DB">📚 Documentation</a>
+    <a href="https://www.waveshare.com/wiki/ESP32-P4-WIFI6-DB">📖 Documentation</a>
   </p>
   <p><img src="docs/images/ESP32-P4-WIFI6-DB.jpg" alt="ESP32-P4-WIFI6-DB development board" width="500"></p>
 </div>
