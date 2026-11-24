@@ -24,6 +24,7 @@
 #include "decoder/impl/esp_opus_dec.h"
 #include "encoder/impl/esp_opus_enc.h"
 #include "esp_heap_caps.h"
+#include "esp_idf_version.h"
 #include "services/include/xiaozhi_services.h"
 #include "freertos/idf_additions.h"
 #include "sdkconfig.h"
@@ -71,6 +72,22 @@ void copyString(char *destination, size_t capacity, const char *source)
     if (destination && capacity > 0) {
         snprintf(destination, capacity, "%s", source ? source : "");
     }
+}
+
+esp_err_t resetPlaybackRingBuffer(RingbufHandle_t queue)
+{
+    if (!queue) {
+        return ESP_ERR_INVALID_ARG;
+    }
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(6, 0, 0)
+    return vRingbufferReset(queue);
+#else
+    size_t item_size = 0;
+    while (void *item = xRingbufferReceive(queue, &item_size, 0)) {
+        vRingbufferReturnItem(queue, item);
+    }
+    return ESP_OK;
+#endif
 }
 
 uint32_t activationRetryDelay(int timeout_ms)
@@ -1862,7 +1879,7 @@ void XiaozhiApp::shutdownAudio()
             _output_resampler = nullptr;
         }
         if (_playback_queue) {
-            (void)vRingbufferReset(_playback_queue);
+            (void)resetPlaybackRingBuffer(_playback_queue);
         }
         xSemaphoreGive(_playback_mutex);
     } else {
@@ -2556,7 +2573,7 @@ bool XiaozhiApp::resetPlaybackBuffer(bool reset_decoder)
 
     bool ok = true;
     if (_playback_queue) {
-        esp_err_t reset_ret = vRingbufferReset(_playback_queue);
+        esp_err_t reset_ret = resetPlaybackRingBuffer(_playback_queue);
         if (reset_ret != ESP_OK) {
             ESP_UTILS_LOGW(
                 "Reset Xiaozhi playback ring buffer failed: %s",
