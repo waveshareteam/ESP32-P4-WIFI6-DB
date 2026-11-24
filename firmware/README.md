@@ -21,4 +21,4 @@ python -m esptool --chip esp32p4 --port <PORT> erase-flash
 python -m esptool --chip esp32p4 --port <PORT> write-flash 0x0 ESP32-P4-WIFI6-DB-10.1-DSI-TOUCH-A_Factory_20260804.bin
 ```
 
-The ESP32-C5 wireless coprocessor firmware is available as [esp32-c5-slave-260623.bin](ESP32-C5/esp32-c5-slave-260623.bin). See [brookesia/README.md](brookesia/README.md) for the ESP-Brookesia example.
+The ESP32-C5 wireless coprocessor firmware is available as [esp32-c5-slave-260623.bin](ESP32-C5/esp32-c5-slave-260623.bin). See [examples/factory/README.md](../examples/factory/README.md) for the ESP-Brookesia factory firmware source.

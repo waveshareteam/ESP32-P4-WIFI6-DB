@@ -30,7 +30,7 @@ dependencies:
   idf: '>=5.5'
   lvgl/lvgl:
     public: true
-    version: '>=8,<10'
+    version: "9.4.*"
   usb:
     public: true
     rules:
